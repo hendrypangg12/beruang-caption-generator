@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beruang Catat Keuangan — Generator Caption & Hashtag</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <main class="app">
+    <header class="header">
+      <div class="logo">
+        <span class="logo-mark">Rp</span>
+        <div>
+          <h1>Beruang Catat Keuangan</h1>
+          <p class="tagline">Generator Caption & Hashtag · App Catat Keuangan</p>
+        </div>
+      </div>
+      <p class="badge">Slice 1 · Caption only</p>
+    </header>
+
+    <section class="card form-card">
+      <label for="topic">Topik / sudut konten</label>
+      <select id="topic">
+        <option value="tips-hemat">Tips hemat</option>
+        <option value="investasi-pemula">Investasi pemula</option>
+        <option value="mindset-uang">Mindset uang</option>
+        <option value="promo-produk">Promo produk</option>
+        <option value="edukasi-finansial">Edukasi finansial</option>
+        <option value="motivation-money">Motivasi financial freedom</option>
+      </select>
+
+      <label for="note">Catatan / produk (opsional)</label>
+      <textarea id="note" rows="3" placeholder="Contoh: fitur catat pengeluaran, promo premium, tip bagi gaji bulanan..."></textarea>
+
+      <button type="button" id="generateBtn" class="btn-primary">
+        Generate 3 caption
+      </button>
+    </section>
+
+    <section id="results" class="results hidden" aria-live="polite">
+      <h2>Hasil caption</h2>
+      <div id="captions"></div>
+
+      <div class="hashtag-block">
+        <div class="block-head">
+          <h3>Hashtag set</h3>
+          <button type="button" id="copyHashtagsBtn" class="btn-ghost">Salin hashtag</button>
+        </div>
+        <p id="hashtags" class="hashtags"></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Generator caption & hashtag untuk marketing Beruang Catat Keuangan — belum posting otomatis ke Instagram.</p>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast hidden" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
